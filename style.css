@@ -1,0 +1,12 @@
+.jumbotron {
+  height:100%;
+  /*background-repeat: no-repeat;
+  background-size: 50% 50%;*/
+  /*border-bottom:1px solid #ff6a00;*/
+  background: url("https://images.unsplash.com/photo-1435265616031-198aa4989e08?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=31d6ec18fbb45e4e7a11330198435a03");
+  text-align: center;
+}
+
+.row {
+
+}
