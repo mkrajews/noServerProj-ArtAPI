@@ -1,12 +1,24 @@
-.jumbotron {
-  height:100%;
-  /*background-repeat: no-repeat;
-  background-size: 50% 50%;*/
-  /*border-bottom:1px solid #ff6a00;*/
-  background: url("https://images.unsplash.com/photo-1435265616031-198aa4989e08?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=31d6ec18fbb45e4e7a11330198435a03");
-  text-align: center;
+.container {
+  margin-top: 50%;
 }
 
-.row {
 
-}
+
+/*.img-x {
+  display: inline-block;
+  font-size: 30px;
+justify-content: center;
+text-align: center;
+max-width: 300px;
+url("http://www.anakin.co/static/svg/cross.svg");
+}*/
+
+/*body {
+  background: url("https://images.unsplash.com/photo-1464808947621-cb105d870565?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=b1bdb8222f02a94a858219d1be3622fa");
+  background-size: 100% 90%;
+  background: cover;
+  background-repeat: no-repeat;
+  width: 0 auto;
+}*/
+
+/*https://images.unsplash.com/photo-1435265616031-198aa4989e08?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=31d6ec18fbb45e4e7a11330198435a03*/
