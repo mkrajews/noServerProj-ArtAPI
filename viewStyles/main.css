@@ -1,1 +1,16 @@
 /*this is the hot pictures css page*/
+.homePage {
+  background: url('https://images.unsplash.com/photo-1466120262033-5fb3f4f67132?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=35d8a2bc1af29392125f9c63078fa330');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center
+}
+
+/*.footer {
+  background: white;
+  height: 100px;
+  width: 100vw;
+}*/

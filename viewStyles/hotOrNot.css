@@ -1,1 +1,6 @@
 /*this is the voting css page*/
+
+.heartbtn {
+    display: flex;
+    justify-content: center;
+}

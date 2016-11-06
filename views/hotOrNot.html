@@ -1,69 +1,42 @@
-<!-- this is the voting html page -->
-
-
-<html ng-app="artApp">
-
-
-  <head>
-    <title>artApp</title>
-    <link rel="stylesheet" href="style.css" media="screen" title="no title">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="viewStyles/hotOrNot.css">
-    <link rel="stylesheet" href="viewStyles/main.css">
-
-  </head>
-
-<!-- body starts -->
-  <body ng-controller="mainCtrl">
-
-
-
-
 <!-- Hot or Not picture section starts -->
+
+<br>
+<br>
+<br>
 <div class="row marketing">
-  <button ng-click="getArt()">Next Contender</button>
+    <button class="btn active center-block" ng-click="getArt()">&nbsp Next Please</button>
 
-  <div ng-repeat="art in arts">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div>
+                <img src="{{arts.images[0].baseimageurl}}" alt=""><br>
+            </div>
 
-    <div ng-repeat="img in art.images">
-      <img src="{{img.baseimageurl}}" alt=""><br>
+            <span>Name: {{arts.title}}</span> <br>
+            <span>Hometown: {{arts.culture}}</span> <br>
+            <span>classification: {{arts.classification}}</span> <br>
+            <span>Artist: {{arts.people[0].name}}</span> <br>
+
+        </div>
+        <div class="col-md-2"></div>
     </div>
-
-    <span>Name: {{art.title}}</span> <br>
-    <span>Hometown: {{art.culture}}</span> <br>
-    <span>Birthdate: {{art.period}}</span> <br>
-    <span>Artist: {{art.people[0].name}}</span> <br>
-
-  </div>
 </div>
+<!-- images[0].baseimageurl -->
+<br>
+<div class="heartbtn">
+    <span class="glyphicon glyphicon-heart active" class="btn" ng-click="pushHot(arts)">&nbsp&nbsp&nbsp</span>
 
-
-
-
-
-
-
-
-
-
-
-
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.js"
-      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-      crossorigin="anonymous"></script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-		<script src="js/app.js"></script>
-		<script src="js/controller.js"></script>
-		<script src="js/service.js"></script>
-
-
-  </body>
+    <span class="glyphicon glyphicon-remove active" class="btn" ng-click="getArt()"></span>
 </div>
+<br>
+<br>
 
-</html>
+<div class="checkArt">
+    <!--You will need to make the ui-sref work. It should point to the booked state. If you look at your app.js the booked state
+is expecting an id to be passed along. You can get that id from the data object that we are repeating over. The syntax for going to a route with params is "routename({param:paramValue})" -->
+    <button type="button" class="btn btn-success btn-sm active center-block" ng-click="checkArt()" ui-sref="Hot">Check out your hot pics</button>
+</div>
+<br>
+<br>
+<br>
