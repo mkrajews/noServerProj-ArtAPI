@@ -6,11 +6,15 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center
+  justify-content: center;
 }
 
-/*.footer {
-  background: white;
-  height: 100px;
-  width: 100vw;
-}*/
+
+.title {
+  color: white;
+  height:900px;
+  width:500px;
+  font-size: 80px;
+  text-align: center;
+  margin-top: 20vh;
+}
