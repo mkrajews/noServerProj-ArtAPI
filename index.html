@@ -18,7 +18,7 @@
 
 
     <!-- navbar div -->
-    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <nav id="navbar-id" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
 
@@ -27,7 +27,8 @@
                         <span class="sr-only">Toggle navigation</span>
                         Menu <i class="fa fa-bars"></i>
                     </button>
-                <h3 class="text-muted hvr-float-shadow artinder" ui-sref="home">ArTinder</h3>
+                <!-- text-muted -->
+                <h3 style="margin-top:30px;" class=" hvr-float-shadow artinder" ui-sref="home">ArTinder</h3>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -35,11 +36,13 @@
                     <!-- <li>
                         <h2 class="glyphicon glyphicon-home" class="btn" ui-sref="home">&nbsp</h2>
                     </li> -->
-                    <li>
-                        <h2 class="glyphicon glyphicon-fire" class="btn" ui-sref="hotOrNot">&nbsp</h2>
+                    <li class="nav-r">
+                        <h4 id="navlink" style="font-family:delhi; color: rgba(217, 138, 108, 0.5);" class="hvr-float-shadow cursor-crosshair" class="btn" ui-sref="hotOrNot">Vote</h4>
+                        <span class="tab-space"></span>
                     </li>
-                    <li>
-                        <h2 style="color: rgb(188, 88, 77);" class="glyphicon glyphicon-heart" class="btn" ui-sref="Hot">&nbsp</h2>
+                    <li class="nav-r">
+                        <h4 id="navlink" style="font-family:delhi; color: rgba(217, 138, 108, 0.5);" class="hvr-float-shadow cursor-crosshair" class="btn" ui-sref="Hot">Favorites</h4>
+                        <span class="tab-space"></span>
                     </li>
 
                 </ul>
@@ -54,10 +57,10 @@
 
     <div>
 
-        <span class="text-left" class="text-muted">ArTinder</span>
-        <div class="glyphicon glyphicon-home" class="btn" ui-sref="home">Home</div>
-        <div class="glyphicon glyphicon-fire" class="btn" ui-sref="hotOrNot">Hot or Not</div>
-        <div class="glyphicon glyphicon-heart" class="btn" ui-sref="Hot">Favorites</div>
+        <span class="text-left" class="text-muted"></span>
+        <div class="glyphicon glyphicon-home" class="btn" ui-sref="home"></div>
+        <div class="glyphicon glyphicon-fire" class="btn" ui-sref="hotOrNot"></div>
+        <div class="glyphicon glyphicon-heart" class="btn" ui-sref="Hot"></div>
     </div>
 
 
@@ -78,12 +81,17 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
 
     <script src="js/app.js"></script>
     <script src="js/hotController.js"></script>
     <script src="js/mainCtrl.js"></script>
     <script src="js/service.js"></script>
     <script src="js/storedArtCtrl.js"></script>
+    <script src="js/jquery.js"></script>
 
     </div>
 

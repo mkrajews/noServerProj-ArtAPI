@@ -1,17 +1,32 @@
 <!-- Hot or Not picture section starts -->
-
+<voting></voting>
+<br>
 <br>
 <br>
 <br>
 <div class="row marketing">
-    <button class=" txt btn active center-block btn-sm" ng-click="getArt()"> Picture Please</button>
 
-    <div class="row">
-        <div class="col-md-2"></div>
+    <br>
+    <div class="hide-me hvr-float-shadow cursor-crosshair hider txt btn  center-block btn-sm" ng-click="getArt()"> Picture Please</div>
+
+    <div class="heartbtn hides">
+
+        <span class="glyphicon glyphicon-remove active hvr-icon-fade" class="btn" ng-click="getArt()">&nbsp</span>
+
+        <span class="glyphicon glyphicon-heart active hvr-icon-fade" class="btn" ng-click="pushHot(arts)">&nbsp&nbsp&nbsp</span>
+
+    </div>
+    <br>
+
+
+<!-- the image section starts here -->
+
+    <div class="sliding row">
+
         <div class="hotpic">
-
             <img src="{{arts.images[0].baseimageurl}}" alt=""><br>
         </div>
+
         <div class="info">
             <span>{{arts.title}}&nbsp</span> <br>
             <!-- <span> {{arts.culture}}</span> <br> -->
@@ -19,21 +34,17 @@
             <span>{{arts.people[0].name}}</span> <br>
         </div>
     </div>
+
+
+
     <!-- images[0].baseimageurl -->
     <br>
-    <div class="heartbtn">
-        <span class="glyphicon glyphicon-heart active" class="btn" ng-click="pushHot(arts)">&nbsp&nbsp&nbsp</span>
-
-        <span class="glyphicon glyphicon-remove active" class="btn" ng-click="getArt()"></span>
-    </div>
-    <br>
-    <br>
-
+    <!-- <div class="hides">
     <div class="checkArt">
-        <!--You will need to make the ui-sref work. It should point to the booked state. If you look at your app.js the booked state
-is expecting an id to be passed along. You can get that id from the data object that we are repeating over. The syntax for going to a route with params is "routename({param:paramValue})" -->
-        <button type="button" class="txt btn btn-success btn-sm active center-block" ng-click="checkArt()" ui-sref="Hot">Check out your hot pics</button>
-    </div>
+            <div class="hvr-float-shadow cursor-crosshair hider txt btn  center-block btn-sm" ng-click="checkArt()" ui-sref="Hot">Check out your hot pics</div>
+        </div>
+    </div> -->
     <br>
     <br>
     <br>
+</div>

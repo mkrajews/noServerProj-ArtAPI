@@ -4,8 +4,16 @@ angular.module('artApp').controller('hotController', function($scope, mainSvc, $
     $scope.getArt = function() {
         // console.log("getting art");
         mainSvc.getArtInfo().then(function(art) {
-            // console.log(art);
-            $scope.arts = art.records[0];
+            // console.log("hit 1");
+            console.log(art.records[0].images.length);
+            if (art.records[0].images.length < 1) {
+              // console.log("hit 2");
+                $scope.getArt();
+            } else {
+              // console.log("hit 3");
+                $scope.arts = art.records[0];
+            }
+
         });
     };
 
