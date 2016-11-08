@@ -18,6 +18,7 @@ h3 {
 .artinder {
     font-family: delhi;
     color: rgba(217, 138, 108, 0.5);
+    /*color: rgb(250,235,215);*/
 }
 
 .title {
@@ -144,10 +145,6 @@ h3 {
 .fave-pics-div {
     display: flex;
     flex-wrap: wrap;
-}
-
-.fav-container {
-    /*max-width: 500px;*/
 }
 
 .fav-info {
