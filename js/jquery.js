@@ -9,6 +9,8 @@ angular.module("artApp").directive("voting", function() {
 
 
 
+// picture slide out...Not possible apparently for now
+
 
             // $('.glyphicon-heart').click(function() {
             //     if ($('.sliding').offset().left !== 0) {

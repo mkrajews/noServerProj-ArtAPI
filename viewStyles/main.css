@@ -11,6 +11,15 @@
     text-align: center;
     font-family: delhi;
     /*color: rgba(217, 138, 108, 0.5);*/
+    padding-left: 80px;
+    padding-right: 80px;
+    line-height: 160%;
+}
+
+.picasso {
+    display: flex;
+    justify-content: center;
+
 }
 
 .post-title {
@@ -20,11 +29,11 @@
 }
 
 .title {
-  /*color: rgba(217, 138, 108, 0.5);*/
-  color: white;
+  color: rgba(217, 138, 108, 0.5);
+  /*color: white;*/
     height: 900px;
     width: 500px;
-    font-size: 80px;
+    font-size: 70px;
     text-align: center;
     margin-top: 20vh;
 }
@@ -37,15 +46,6 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-/*#prlx2 {
-  background: url('https://images.unsplash.com/photo-1476455553758-5a8b16727e23?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=44a59498e81da125697b41ecca9f4433');
-  height: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}*/
 
 
 .parallax3 {

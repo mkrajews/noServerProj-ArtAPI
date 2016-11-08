@@ -15,3 +15,5 @@ angular.module("artApp").service("mainSvc", function($http) {
         });
     };
 });
+
+// modified api url for specific needs
