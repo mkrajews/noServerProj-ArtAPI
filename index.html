@@ -1,65 +1,67 @@
 <html ng-app="artApp">
 
-  <head>
-    <title>artApp</title>
+
+<head>
+    <title>ArTinder</title>
     <link rel="stylesheet" href="style.css" media="screen" title="no title">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  </head>
+
+    <link rel="stylesheet" href="viewStyles/hotOrNot.css">
+    <link rel="stylesheet" href="viewStyles/main.css">
+
+</head>
 
 <!-- body starts -->
-  <body ng-controller="mainCtrl">
 
-<!-- navbar div -->
-  <div class="container-fluid">
-    <div class="header clearfix">
-      <nav>
-        <ul class="nav nav-pills pull-right">
+<body ng-controller="mainCtrl">
 
-          <li role="presentation" class="active">
-            <a href="#">Home</a>
-          </li>
-          <li role="presentation" class="active">
-            <a href="#">About</a>
-          </li>
-          <li role="presentation" class="active">
-            <a href="#">Contact</a>
-          </li>
 
-        </ul>
-      </nav>
-      <h3 class="text-muted">Hot or Not</h3>
+    <!-- navbar div -->
+    <nav id="navbar-id" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle grouped for better mobile display -->
+
+            <div class="navbar-header page-scroll">
+                <div type="button" class="navbar-toggle cursor-crosshair" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only ">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </div>
+                <!-- text-muted -->
+                <h3 style="margin-top:30px;" class=" hvr-float-shadow artinder" ui-sref="home">ArTinder</h3>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="nav-r">
+                        <h4 id="navlink" class="hvr-float-shadow cursor-crosshair" class="btn" ui-sref="hotOrNot">Vote</h4>
+                        <span class="tab-space"></span>
+                    </li>
+                    <li class="nav-r">
+                        <h4 id="navlink" class="hvr-float-shadow cursor-crosshair" class="btn" ui-sref="Hot">Favorites</h4>
+                        <span class="tab-space"></span>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="space"></div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+
+    <div>
+
+        <span class="text-left" class="text-muted"></span>
+        <div class="glyphicon glyphicon-home" class="btn" ui-sref="home"></div>
+        <div class="glyphicon glyphicon-fire" class="btn" ui-sref="hotOrNot"></div>
+        <div class="glyphicon glyphicon-heart" class="btn" ui-sref="Hot"></div>
     </div>
 
-<!-- jumbotron div  -->
-<div class="jumbotron">
-  <h1>
-    <!-- Jumbotron heading -->
-  </h1>
-  <p class="lead">
-    <!-- Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. -->
-  </p>
-    <!-- <p> <a class="btn btn-lg btn-success" href="#" role="button">Contact</a> -->
-  </p>
-</div>
 
-<!-- Hot or Not picture section starts -->
-<div class="row marketing">
-  <button ng-click="getArt()">Next Contender</button>
-
-  <div ng-repeat="art in arts">
-
-    <div ng-repeat="img in art.images">
-      <img src="{{img.baseimageurl}}" alt=""><br>
-    </div>
-
-    <span>Name: {{art.title}}</span> <br>
-    <span>Hometown: {{art.culture}}</span> <br>
-    <span>Birthdate: {{art.period}}</span> <br>
-    <span>Artist: {{art.people[0].name}}</span> <br>
-
-  </div>
-</div>
+    <ui-view></ui-view>
 
 
 
@@ -68,27 +70,25 @@
 
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
 
-
-
-
-
-
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.js"
-      integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
-      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 
+    <script src="js/app.js"></script>
+    <script src="js/hotController.js"></script>
+    <script src="js/mainCtrl.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/storedArtCtrl.js"></script>
+    <script src="js/jquery.js"></script>
 
-  </body>
-</div>
+    </div>
+
+</body>
 
 </html>

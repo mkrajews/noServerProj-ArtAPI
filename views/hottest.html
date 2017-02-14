@@ -1,0 +1,35 @@
+<!-- this is the saved array of liked pictures -->
+<div class="hottest-flex">
+    <div class="faves">
+        <div class="fav-container" ng-repeat="arts in saved">
+            <div class="faves">
+                <img class="border" ng-src="{{arts.images[0].baseimageurl}}" /><br>
+            </div>
+
+            <div class='fave-pics-div'>
+
+                <ul class="fav-info">
+                    <li><span>Name: {{arts.title}}</span></li>
+                    <li><span>Culture: {{arts.culture}}</span></li>
+                    <li><span>Artist: {{arts.people[0].name}}</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="hottest-flex">
+    <div class="faves">
+        <div ng-repeat="arts in saved" class="fave-pics-div">
+            <div class="fave-pics">
+                <div class="fave-pics-div">
+                    <img ng-src="{{arts.images[0].baseimageurl}}" alt="" /><br>
+                </div>
+                <span>Name: {{arts.title}}</span> <br>
+                <span>Culture: {{arts.culture}}</span> <br>
+                <span>Artist: {{arts.people[0].name}}</span> <br>
+            </div>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,51 @@
+<!-- Hot or Not picture section starts -->
+<voting></voting>
+<br>
+<br>
+<div class="row marketing">
+<br>
+
+    <br>
+    <div class="hide-me hvr-float-shadow cursor-crosshair hider txt btn  center-block btn-sm" ng-click="getArt()"> Picture Please</div>
+
+    <div class="heartbtn hides">
+
+        <span class="glyphicon glyphicon-remove active hvr-icon-fade" class="btn" ng-click="getArt()">&nbsp</span>
+
+        <span class="glyphicon glyphicon-heart active hvr-icon-fade" class="btn" ng-click="pushHot(arts)">&nbsp&nbsp&nbsp</span>
+
+    </div>
+    <br>
+
+
+<!-- the image section starts here -->
+
+    <div class="sliding row">
+
+        <div class="hotpic">
+            <img src="{{arts.images[0].baseimageurl}}" alt="">
+            <br>
+        </div>
+
+        <div class="info">
+            <span>{{arts.title}}&nbsp</span>
+            <br>
+            <!-- <span>classification: {{arts.classification}}</span> <br> -->
+            <span>{{arts.people[0].name}}</span>
+            <br>
+        </div>
+    </div>
+
+
+
+    <!-- images[0].baseimageurl -->
+    <br>
+    <!-- <div class="hides">
+    <div class="checkArt">
+            <div class="hvr-float-shadow cursor-crosshair hider txt btn  center-block btn-sm" ng-click="checkArt()" ui-sref="Hot">Check out your hot pics</div>
+        </div>
+    </div> -->
+    <br>
+    <br>
+    <br>
+</div>
